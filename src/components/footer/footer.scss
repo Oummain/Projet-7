@@ -1,0 +1,25 @@
+@use "../../utils/variables";
+@use '../../utils/mixin';
+
+
+.footer {
+    padding: unset;
+    background-color: black;
+    width: 100%;
+    @include mixin.color-white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 209px;
+    gap: 20px;
+
+    &_logo {
+        width: 100px;
+
+    }
+
+    &_txt {
+        font-size: 1.5rem;
+    }
+}

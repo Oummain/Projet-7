@@ -1,0 +1,14 @@
+.collapse{
+    display: flex;
+    flex-flow: column;
+    margin-top: 50px;
+    gap: 35px;
+   
+    
+
+    .dropdown{
+        max-width: 1023px;
+        margin: 0 auto;
+
+    }
+}

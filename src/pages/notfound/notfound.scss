@@ -1,0 +1,38 @@
+@use "../../utils/variables";
+@use "../../utils/mixin";
+
+
+.notfound {
+    max-width: 1440px;
+    color: variables.$color-primary;
+    padding: 20px;
+
+
+    .nav {}
+
+
+    &_bloc {
+        text-align: center;
+
+
+        &_title {
+            font-size: clamp(6rem, 25vw, 18rem);
+            font-weight: 900;
+        }
+
+
+        &_txt {
+            padding-top: 40px;
+            font-size: 1.5rem;
+        }
+    }
+
+
+    &_link {
+        display: block;
+        text-decoration: underline;
+        text-align: center;
+        padding-top: 100px;
+        font-size: 1.5rem;
+    }
+}

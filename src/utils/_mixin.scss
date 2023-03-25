@@ -1,0 +1,29 @@
+@use "./variables";
+
+@mixin border-radius{
+    border-radius: 10px;
+}
+
+@mixin bg-cp{
+    background-color: variables.$color-primary;
+}
+
+@mixin bg-cs{
+    background-color: variables.$color-secondary;
+}
+
+@mixin bg-cps{
+    background: linear-gradient(variables.$color-primary, variables.$color-secondary);
+}
+
+@mixin bg-cg{
+    background-color: variables.$color-grey;
+}
+
+@mixin color-primary{
+    color: variables.$color-primary;
+}
+
+@mixin color-white{
+    color: white;
+}

@@ -1,0 +1,16 @@
+.default{
+    
+    width: 100%;
+    display: grid;
+    justify-self: center;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+    
+
+    &_content,.nav{
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+}

@@ -1,0 +1,74 @@
+@use "../../utils/variables";
+@use "../../utils/mixin";
+
+.nav {
+    // position: relative;
+    // max-width: 1440px;
+    // width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 100px;
+    // border: solid;
+
+    @media screen and (max-width: 450px) {
+        flex-flow: column;
+        gap: 20px;
+        margin-bottom: 50px;
+    }
+
+    &_img {
+        // display: flex;
+        width: 240px;
+        height: 70px;
+        align-self: center;
+        justify-self: center;
+        // border: solid;
+        @media screen and (max-width: variables.$breakpoint-mobile) {
+            width: 160px;
+            height: 47px;
+        }
+
+    }
+
+    &_barre {
+        // padding: 0;
+        // border: solid;
+        // width: 200px;
+        display: flex;
+        justify-content: space-between;
+        // margin-right: 100px;
+        gap: 60px;
+
+
+        &_link {
+
+            @include mixin.color-primary;
+            // display: flex;
+            // justify-content: space-between;
+            // position: absolute;
+            // right: 0px;
+            // width: 500px;
+            font-size: 1.6rem;
+
+            @media screen and (max-width: variables.$breakpoint-mobile)and (min-width: 450px){
+                font-size: 1.3rem;
+            }
+            // &:hover {
+            //     text-decoration: underline;
+            // }
+        }
+    }
+
+}
+
+// .link1 {
+//     // font-size: 200px;
+//     position: absolute;
+//     right: 150px;
+// }
+
+// .link2 {
+//     position: absolute;
+//     right: 0;
+// }

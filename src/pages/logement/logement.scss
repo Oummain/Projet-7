@@ -1,0 +1,106 @@
+@use "../../utils/variables";
+@use "../../utils/mixin";
+
+
+.logement_presentation {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    // border: solid;
+    // height: max-content;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    @media screen and (max-width: variables.$breakpoint-mobile) {
+        flex-flow: column;
+
+    }
+}
+
+.bloc {
+    display: grid;
+    gap: 10px;
+
+    .title {
+        font-size: 2rem;
+        font-weight: 500;
+
+    }
+
+    .location {
+        font-size: 1.1rem;
+        font-weight: 500;
+        text-align: left;
+
+    }
+
+    .tags {
+        display: flex;
+        flex-flow: wrap;
+        gap: 10px;
+
+    }
+}
+
+.bloc2 {
+    display: flex;
+    flex-flow: column;
+    // display: grid;
+    padding: 10px 0 10px 0;
+
+    @media screen and (max-width: variables.$breakpoint-mobile) {
+        flex-flow: row-reverse;
+        align-items: center;
+    }
+
+    .loueur {
+        grid: loueur;
+        display: flex;
+        // display: grid;
+        // justify-content: baseline;
+        align-items: center;
+        grid-template-areas:
+        "names img"
+        ;
+        
+
+        &_name {
+            grid: names;
+            font-size: 1.2rem;
+            padding-right: 10px;
+            font-weight: 500;
+            width: min-content;
+            align-self: center;
+            text-align: end;
+        }
+
+        &_img {
+            grid: img;
+            height: 64px;
+            width: 64px;
+            border-radius: 50%;
+        }
+    }
+
+    .star {
+        grid: star;
+        display: flex;
+        flex: auto;
+        align-items: end;
+        height: 2rem;
+    }
+}
+
+
+
+
+.dropdowns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+
+    @media screen and (max-width: variables.$breakpoint-mobile) {
+        grid-template-columns: 1fr;
+    }
+}

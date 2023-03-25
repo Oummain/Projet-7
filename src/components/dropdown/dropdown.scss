@@ -1,0 +1,37 @@
+@use "../../utils/variables";
+@use "../../utils/mixin";
+
+
+
+
+.dropdown {
+      font-weight: 500;
+    // text-align: left;
+
+    &_title {
+        @include mixin.color-white;
+        @include mixin.bg-cp;
+        @include mixin.border-radius;
+        position: relative;
+        // width: 100%;
+        // height: 52px;
+        padding: 13px 0px 13px 20px;
+        font-size: 1.1rem;
+
+        .vector {
+            position: absolute;
+            right: 10px;
+            top: 40%;
+        }
+
+    }
+
+
+    &_content {
+        @include mixin.color-primary;
+        @include mixin.bg-cg;
+        padding: 25px 27px 12px 20px;
+        list-style: none;
+        font-size: 1rem;        
+    }
+}

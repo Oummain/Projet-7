@@ -1,0 +1,30 @@
+@use "../../utils/variables";
+@use "../../utils/mixin";
+
+
+.home {
+    // margin: 20px;
+    // padding: 40px 50px;
+    // background-color: aquamarine;
+    // border: solid;
+    display: grid;
+
+    &_cards{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 25px;
+
+
+        @media screen and (max-width: variables.$breakpoint-tablette){
+              grid-template-columns: 1fr 1fr;
+        }
+
+        @media screen and (max-width: variables.$breakpoint-mobile){
+           grid-template-columns: 1fr;   
+        }
+    }
+}
+
+
